@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fox Wildlife Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Random Fox Wildlife Gallery</h1>
+        <div class="theme-toggle">
+            <button id="toggle-theme" aria-label="Toggle dark mode">
+                <span id="theme-icon" style="display:inline-block;vertical-align:middle;width:1.7em;height:1.7em;"></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="search-section">
+            <input type="text" id="search-bar" placeholder="Search by tag (e.g. cute, wild)...">
+            <button id="search-btn">Search</button>
+            <button id="load-more-btn">Load More</button>
+        </section>
+        <section id="loading" class="hidden">Loading...</section>
+        <section id="error-container" class="hidden"></section>
+        <section id="gallery" class="gallery"></section>
+        <section id="favorites-section">
+            <h2>Favorites</h2>
+            <div id="favorites-gallery" class="gallery"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Powered by <a href="https://randomfox.ca/" target="_blank" rel="noopener">RandomFox API</a> | Coded by Chaya Manuel</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal hidden">
+        <span class="modal-close" id="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img" src="" alt="Fox Full View">
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
